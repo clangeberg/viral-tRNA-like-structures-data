@@ -10,20 +10,12 @@ This repository contains the Stockholm alignments, calibrated Infernal covarianc
 - `data/entropy/`: Henikoff-weighted normalized Shannon entropy tables used for the TLSVal, TLSHis, and Bromovirus TLSTyr structure-mapped panels.
 - `data/insertions/`: insertion-boundary frequencies, residue-level colors, and color-scale metadata used for the structure-mapped panels.
 - `data/mappings/`: reference-sequence-to-PDB residue maps and the corresponding entropy values.
-- `scripts/`: code used to recalculate the derived data tables.
-- `provenance/checksums_sha256.csv`: SHA-256 checksums for the deposited data files.
 
 ## Alignment counts
 
 The current alignments contain 201 canonical TLS subtype records: 116 TLSVal, 33 TLSHis, 46 Bromoviridae TLSTyr, and 6 hordeivirus TLSTyr. The 52 TLSTyr subtype records reduce to 49 nonduplicate sequences in the shared TLSTyr core alignment because three subtype records are exact sequence duplicates. The related-element alignments contain 12 tobravirus 3′ pseudoknots, 50 type 1/2 TLEs, and 16 type 3 TLEs.
 
-## Recalculation of derived tables
-
-From the repository root:
-
-```bash
-python3 scripts/calculate_alignment_metrics.py
-```
+## Data definitions
 
 Normalized Shannon entropy is calculated as `H/log(4)` from Henikoff-weighted, non-gap A/C/G/U frequencies. The scale therefore ranges from 0 for an invariant alignment position to 1 for a maximally diverse position. Insertion frequency is the fraction of evaluable alignment records containing at least one nucleotide within a reference-gap block bounded by two retained reference nucleotides. Frequencies are mapped to both experimentally resolved flanking residues.
 
