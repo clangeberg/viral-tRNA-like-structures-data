@@ -5,7 +5,7 @@ This repository contains the Stockholm alignments, calibrated Infernal covarianc
 ## Contents
 
 - `alignments/`: eight curated Stockholm alignments.
-- `covariance_models/`: the existing calibrated covariance models supplied with the study, preserved unchanged.
+- `covariance_models/`: calibrated covariance models rebuilt from the corresponding deposited alignments.
 - `data/sequence_counts.csv`: record and alignment-column counts for every alignment.
 - `data/entropy/`: Henikoff-weighted normalized Shannon entropy tables used for the TLSVal, TLSHis, and Bromovirus TLSTyr structure-mapped panels.
 - `data/insertions/`: insertion-boundary frequencies, residue-level colors, and color-scale metadata used for the structure-mapped panels.
@@ -19,4 +19,4 @@ The current alignments contain 201 canonical TLS subtype records: 116 TLSVal, 33
 
 Normalized Shannon entropy is calculated as `H/log(4)` from Henikoff-weighted, non-gap A/C/G/U frequencies. The scale therefore ranges from 0 for an invariant alignment position to 1 for a maximally diverse position. Insertion frequency is the fraction of evaluable alignment records containing at least one nucleotide within a reference-gap block bounded by two retained reference nucleotides. Frequencies are mapped to both experimentally resolved flanking residues.
 
-The deposited models are the existing study models from `Working_SI/CM`; they were built and calibrated with Infernal 1.1.2 and were copied into this repository without recalculation. Updated covariance models are intended for submission to Rfam following bioRxiv deposition.
+The deposited models were rebuilt from the corresponding Stockholm alignments with Infernal 1.1.5 using the default automatic `cmbuild` architecture and calibrated with `cmcalibrate --cpu 8`. The covariance models are intended for submission to Rfam following bioRxiv deposition.
