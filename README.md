@@ -10,6 +10,7 @@ This repository contains the Stockholm alignments, calibrated Infernal covarianc
 - `data/entropy/`: Henikoff-weighted normalized Shannon entropy tables used for the TLSVal, TLSHis, and Bromovirus TLSTyr structure-mapped panels.
 - `data/insertions/`: insertion-boundary frequencies, residue-level colors, and color-scale metadata used for the structure-mapped panels.
 - `data/mappings/`: reference-sequence-to-PDB residue maps and the corresponding entropy values.
+- `data/search_results/`: supplemental workbook linking every retained final-alignment record to its corresponding archived `cmsearch` hit rows.
 
 ## Alignment counts
 
